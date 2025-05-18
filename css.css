@@ -1,0 +1,68 @@
+/*changing da labels in forms.html*/
+label{
+    color:darkseagreen;
+    font-family:'Comic Sans MS';
+    font-size:30px;
+    /*text border code: border-style:solid*/
+}
+
+.HOI{
+    color:rgb(75, 160, 172);
+   font-family:'Comic Sans MS'
+    }
+
+.todoclass{
+    color:darkseagreen;
+    font-family:'Comic Sans MS';
+    font-size:50px
+}
+/*two id changes at once!*/
+#box,#hi{
+    width:300px;
+    height:50px;
+    font-size:25px
+}
+
+#list{
+    font-size: 50px;
+}
+
+#pinid{
+    font-family:'Comic Sans MS';
+    font-size: 30px;
+    color:darkseagreen;
+}
+/*adds a margin to the title, makes the text go to the center of the border*/
+#titleforindex{
+    margin: auto;
+    border: 2px solid seagreen;
+    /*makes the text go to the center of the box.*/
+    text-align: center;
+}
+
+body, input, textarea{
+    background-color: beige;
+}
+
+.custom{
+    background-color: beige;
+}
+
+.temmie{
+    margin: auto;
+}
+
+.custom{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 50px;
+    background-color:red;
+}
+
+.custom:checked{
+    background-color: green;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<!--Btw btw here's the order of CSS code: 1. inline code 2. internal code (inside the html thingy) 3. external(inside the CSS thingy)-->
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Delicious Handrawn' rel='stylesheet'>
+        <link rel="stylesheet" href="css.css">
+        <title>Forms</title>
+    </head>
+    <body>
+        <a href="index.html" class="todoclass" style="color:blue">
+            Back to home page
+        </a><br/>
+        <form>
+            <label>Type something!</label>
+             <input type="input" required/> <br/>
+             <!--|for| can only go in <label>. It's used to "link" the text to the box, using |id| in <input>.-->
+            <!--|class| is for grouping multiple |id| together. However, They not necessarily need to be together all the time.-->
+
+
+
+            <!--|required| makes an <input> required when using the <input> type submit.-->
+            <label for="number" id="pinid">Pin</label>
+             <input type="number" id="number" class="input" required/><br/>
+
+
+            <label class="todoclass" style="font-size:25px">Date</label>
+             <input type="date" class="input"/><br/>
+
+
+             <label class="todoclass" style="font-size:25px">Terraria or Minecraft?</label>
+             <textarea></textarea><br/>
+
+
+             <label class="todoclass" style="font-size:25px">Email</label>
+             <input type="email"/><br/>
+
+
+             <label class="todoclass" style="font-size:25px">Fast food places:</label>
+             <input type="radio" name="foods" class="custom"/>
+             <label class="todoclass" style="font-size:25px">Jollibee</label>
+             <input type="radio" name="foods" class="custom"/>
+             <label class="todoclass" style="font-size:25px">Mang Inasal</label>
+             <input type="radio" name="foods" class="custom" />
+             <label class="todoclass" style="font-size:25px">McDonalds</label><br/> <br/>
+
+
+             <input type="submit" value="SEND" style="font-family: Comic Sans MS; font-size: 25px;"/>
+             <input type="reset" value="CLEAR ALL" style="font-family: Comic Sans MS; font-size: 25px;"/>
+
+
+
+
+             <!--For CSS, |class| uses a [.] before |class|. [#] is used instead for |id|. This is for styling purposes :D-->
+
+
+        </form>
+    </body>
+</html>
