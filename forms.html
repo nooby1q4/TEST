@@ -6,14 +6,35 @@
         <link href='https://fonts.googleapis.com/css?family=Delicious Handrawn' rel='stylesheet'>
         <link rel="stylesheet" href="css.css">
         <title>Forms</title>
+        <!--AW YEAH INTERNAL JAVASCRIPT-->
+        <script>
+            function password(event){
+                /*prevent reload lah!*/
+                event.preventDefault();
+                /*like python print function*/
+                console.log("inside password function");
+                /*get the answer and print it on console.*/
+                 var answer =document.getElementById("word").value;
+                 console.log(answer);
+
+                if(answer == "pizza")
+                {
+                    window.location.href = "lol_randomstuff.html";
+                }
+                else{
+                    alert("nope.")
+                }
+
+            }
+        </script>
     </head>
     <body>
         <a href="index.html" class="todoclass" style="color:blue">
             Back to home page
         </a><br/>
         <form>
-            <label>Type something!</label>
-             <input type="input" required/> <br/>
+            <label>Guess the mystery word for a secret prize!</label>
+             <input type="input" required id="word"/> <br/>
              <!--|for| can only go in <label>. It's used to "link" the text to the box, using |id| in <input>.-->
             <!--|class| is for grouping multiple |id| together. However, They not necessarily need to be together all the time.-->
 
@@ -21,7 +42,7 @@
 
             <!--|required| makes an <input> required when using the <input> type submit.-->
             <label for="number" id="pinid">Pin</label>
-             <input type="number" id="number" class="input" required/><br/>
+             <input type="number" id="number" class="input"/><br/>
 
 
             <label class="todoclass" style="font-size:25px">Date</label>
@@ -45,7 +66,7 @@
              <label class="todoclass" style="font-size:25px">McDonalds</label><br/> <br/>
 
 
-             <input type="submit" value="SEND" style="font-family: Comic Sans MS; font-size: 25px;"/>
+             <input onclick="password(event)" type="submit" value="SEND" style="font-family: Comic Sans MS; font-size: 25px;"/>
              <input type="reset" value="CLEAR ALL" style="font-family: Comic Sans MS; font-size: 25px;"/>
 
 
