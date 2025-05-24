@@ -28,13 +28,14 @@
             }
         </script>
     </head>
-    <body>
-        <a href="index.html" class="todoclass" style="color:blue">
+    <body class="formBody">
+        <a href="index.html" class="todoclass">
             Back to home page
-        </a><br/>
+        </a>
+        <br/>
         <form>
             <label>Guess the mystery word for a secret prize!</label>
-             <input type="input" required id="word"/> <br/>
+             <input type="text" class="input" required id="word"/> <br/>
              <!--|for| can only go in <label>. It's used to "link" the text to the box, using |id| in <input>.-->
             <!--|class| is for grouping multiple |id| together. However, They not necessarily need to be together all the time.-->
 
@@ -45,29 +46,31 @@
              <input type="number" id="number" class="input"/><br/>
 
 
-            <label class="todoclass" style="font-size:25px">Date</label>
+            <label class="todoclass">Date</label>
              <input type="date" class="input"/><br/>
 
 
-             <label class="todoclass" style="font-size:25px">Terraria or Minecraft?</label>
+             <label class="todoclass">Terraria or Minecraft?</label>
              <textarea></textarea><br/>
 
 
-             <label class="todoclass" style="font-size:25px">Email</label>
-             <input type="email"/><br/>
+             <label class="todoclass">Email</label>
+             <input type="email" class="input"/><br/>
 
 
-             <label class="todoclass" style="font-size:25px">Fast food places:</label>
-             <input type="radio" name="foods" class="custom"/>
-             <label class="todoclass" style="font-size:25px">Jollibee</label>
-             <input type="radio" name="foods" class="custom"/>
-             <label class="todoclass" style="font-size:25px">Mang Inasal</label>
-             <input type="radio" name="foods" class="custom" />
-             <label class="todoclass" style="font-size:25px">McDonalds</label><br/> <br/>
+             
+             <label class="todoclass">Fast food places:</label>
+            <div class="radiogroup">
+             <input type="radio" name="foods"/>
+             <label class="todoclass">Jollibee</label>
+             <input type="radio" name="foods" />
+             <label class="todoclass">Mang Inasal</label>
+             <input type="radio" name="foods"  />
+             <label class="todoclass">McDonalds</label><br/> <br/>
+            </div>
 
-
-             <input onclick="password(event)" type="submit" value="SEND" style="font-family: Comic Sans MS; font-size: 25px;"/>
-             <input type="reset" value="CLEAR ALL" style="font-family: Comic Sans MS; font-size: 25px;"/>
+             <input class="btn" onclick="password(event)" type="submit" value="SEND" style="font-family: Comic Sans MS; font-size: 25px;"/>
+             <input class="btn" type="reset" value="CLEAR ALL" style="font-family: Comic Sans MS; font-size: 25px;"/>
 
 
 

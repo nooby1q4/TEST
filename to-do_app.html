@@ -15,27 +15,35 @@
       document.getElementById("list").removeChild(this);
     }
   </script>
-  <style>
-    input[type="button"] {
-      background-color: pink;
-    }    
-  </style>
-  <p class="todoclass">Web-based To-do List App By Rafa
+
+
+   
+  </head>
+  <body class="todobody">
+      <div class="container">
+     <a href="index.html" style="color:blue">
+      Back to home page
+    </a>
+    <h1>
+      To-Do list
+    </h1>
+ 
+  <p class="description">Web-based To-do List App By Rafa
     <br/>To remove data, click on it!
   </p>
   <br/>
-  <body>
-    <a class="todoclass" href="index.html" style="color:blue">
-      Back to home page
-    </a>
-  </body>
+  
+   
   <br/>
   <!--|placeholder| adds faded text to your <input>. It's used to create examples that are instantly deleted when you type in the input!-->
-  <input type="text" id="box" placeholder="Type here to add text"/>
+  <input type="text" id="box" placeholder="Type here to add text" maxlength="20"/>
+  <br/>
   <br/>
   <input id="hi" type="button" value="Add item" onclick="addItem();"/>
   <br/>
   <div id="list"></div>
+  </div>
+  </body>
 </html>
 
 
