@@ -32,8 +32,12 @@ label{
     text-align: center;
 }
 
+.indexBody{
+      background: linear-gradient(to right, #e0f7fa, #e1bee7);
+}
 body, input, textarea{
     background-color: beige;
+    /* background: linear-gradient(to right, #e0f7fa, #e1bee7); */
 }
 
 .custom{
@@ -65,7 +69,7 @@ body, input, textarea{
     flex-direction: column;/*a column flex :D*/
     align-items: center;/*center aligning*/
     margin: 25px;
-    background-color:#fdf6ec;
+    background: linear-gradient(to right, #e0f7fa, #e1bee7);
     
 }
 
@@ -163,7 +167,7 @@ textarea{
 
 .todobody{
     font-family: "Calibri", sans-serif;
-    background-color: #f9f9f9;
+    background: linear-gradient(to right, #e0f7fa, #e1bee7);
     margin: 0;
     padding: 40px;
 
@@ -207,4 +211,66 @@ border: 1px solid #ccc;
 border-radius: 5px;
 box-sizing: border-box;
 }
+
+#trainheader{
+    font-size: 45px;
+    font-family: 'Calibri', sans-serif;
+}
+
+#trainp1{
+    font-size: 30px;
+    font-family: 'Calibri', sans-serif;
+}
+
+.routeBody {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #e0f7fa, #e1bee7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .routeForm {
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 500px;
+      }
+      .routeLabel {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: bold;
+        color: #333;
+      }
+      .routeSelect {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+      }
+
+      .routeSubmit {
+        width: 100%;
+        background-color: #6200ea;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+       }
+      .routeSubmit:hover {
+        background-color: #3700b3;
+      }
+      p#route {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #444;
+        font-weight: bold;
+      }
+
 

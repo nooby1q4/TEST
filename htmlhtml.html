@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css.css">
+    <title>I like traines :D</title>
+    <script>
+      /*an array. arrays are like boxes that hold multiple informations. Not to be confused with variables.*/
+      /*add this info SEQUENTIALLY*/
+      function route(event) {
+        event.preventDefault();
+        var northEastLine = [
+          "harbourfront",
+          "outram park",
+          "chinatown",
+          "clarke quay",
+          "dhoby ghaut",
+          "little india",
+          "farrer park",
+          "boon keng",
+          "potong pasir",
+          "woodleigh",
+          "serangoon",
+          "kovan",
+          "hougang",
+          "buangkok",
+          "sengkang",
+          "punggol",
+        ];
+
+        /*storing the users answers. theClub is for current location, (theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlow) is for destination.*/
+        var theClub = document.getElementById("l").value;
+        var theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlow =
+          document.getElementById("d").value;
+        /*this will take the position of the current position (theClub) and destination(theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlow).*/
+        var theClubPos = northEastLine.indexOf(theClub);
+        var theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlowPos =
+          northEastLine.indexOf(
+            theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlow
+          );
+
+        var routeSegment;
+        if (
+          theClubPos <
+          theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlowPos
+        ) {
+          /*this will only take all the items within theClub and theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlow.*/
+          routeSegment = northEastLine.slice(
+            theClubPos,
+            theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlowPos +
+              1
+          );
+        } else {
+          routeSegment = northEastLine
+            .slice(
+              theClubIsntTheBestPlaceToFindToFindAClubSoTheClubIsWhereIClubMeAndMyClubsDrinkingClubAtTheClubDoingClubAndWeClubSlowPos,
+              theClubPos + 1
+            )
+            .reverse();
+        }
+
+        const routeDisplay = routeSegment.map((station) =>
+          station
+            .split(" ")
+            .map((word) => word)
+            .join(" ")
+        );
+
+        document.getElementById("route").innerHTML =
+          "Route: " + routeDisplay.join(" → ");
+      }
+    </script>
+  </head>
+
+  <body class="routeBody">
+    <form class="routeForm">
+   <a href="index.html" style="color: blue"> Back to home page </a>
+
+        <h1 id="trainheader">Train paths</h1>
+    <br />
+    <p id="trainp1">
+      For the North-East line. Just input the stop you are at and your
+      destination!
+    </p>
+    <!--Script for the trains-->
+
+   
+      <!--for means the label is for an id.-->
+
+      <label for="l" class="routeLabel">Current Location:</label>
+      <select id="l" class="routeSelect">
+        <option value="harbourfront">HarbourFront</option>
+        <option value="outram park">Outram Park</option>
+        <option value="chinatown">Chinatown</option>
+        <option value="clarke quay">Clarke Quay</option>
+        <option value="dhoby ghaut">Dhoby Ghaut</option>
+        <option value="little india">Little India</option>
+        <option value="farrer park">Farrer Park</option>
+        <option value="boon keng">Boon Keng</option>
+        <option value="potong pasir">Potong Pasir</option>
+        <option value="woodleigh">Woodleigh</option>
+        <option value="serangoon">Serangoon</option>
+        <option value="kovan">Kovan</option>
+        <option value="hougang">Hougang</option>
+        <option value="buangkok">Buangkok</option>
+        <option value="sengkang">Sengkang</option>
+        <option value="punggol">Punggol</option>
+      </select>
+      <label for="d" class="routeLabel">Destination:</label>
+      <select id="d" class="routeSelect">
+        <option value="harbourfront">HarbourFront</option>
+        <option value="outram park">Outram Park</option>
+        <option value="chinatown">Chinatown</option>
+        <option value="clarke quay">Clarke Quay</option>
+        <option value="dhoby ghaut">Dhoby Ghaut</option>
+        <option value="little india">Little India</option>
+        <option value="farrer park">Farrer Park</option>
+        <option value="boon keng">Boon Keng</option>
+        <option value="potong pasir">Potong Pasir</option>
+        <option value="woodleigh">Woodleigh</option>
+        <option value="serangoon">Serangoon</option>
+        <option value="kovan">Kovan</option>
+        <option value="hougang">Hougang</option>
+        <option value="buangkok">Buangkok</option>
+        <option value="sengkang">Sengkang</option>
+        <option value="punggol">Punggol</option>
+      </select>
+
+      <input type="submit" value="Search" class="routeSubmit" onclick="route(event)" />
+      <br />
+      <p id="route"></p>
+    </form>
+  </body>
+</html>
