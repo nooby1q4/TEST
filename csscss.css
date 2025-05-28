@@ -1,0 +1,9 @@
+.credits{
+    font-family:"Calibri", sans-serif;
+    font-size: 30px;
+    color: brown;
+}
+
+.creditsBody{
+     background-color: linear-gradient(to right, #e0f7fa, #e1bee7);
+}
